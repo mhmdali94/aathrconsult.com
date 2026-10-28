@@ -3325,12 +3325,19 @@ body.lang-en .whatsapp-popup-card {
         width: 100%;
     }
 
+    /* The sticky header (z-index 1000) is its own stacking context, so the
+       drawer inside it can only rise above the overlay if the overlay sits
+       below the header as a whole */
     .mobile-menu-overlay.active {
         position: fixed;
         inset: 0;
         background: rgba(5, 13, 26, 0.6);
         backdrop-filter: blur(4px);
-        z-index: 1001;
+        z-index: 999;
+    }
+
+    .floating-quick-hub {
+        z-index: 998;
     }
 }
 
@@ -4515,6 +4522,275 @@ body.lang-en .explore-teaser-chip:hover .explore-teaser-arrow {
     }
 
     .explore-teaser-steps li:not(:last-child)::after {
+        display: none;
+    }
+}
+
+/* ── 22. MOBILE ADAPTATION ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    /* Floating WhatsApp sits on the reading-end side so it never covers
+       the start of headings and buttons (left in Arabic, right in English) */
+    .floating-quick-hub {
+        right: auto;
+        left: 16px;
+        bottom: 16px;
+    }
+
+    body.lang-en .floating-quick-hub {
+        left: auto;
+        right: 16px;
+    }
+
+    .floating-whatsapp-btn {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+
+    /* Hero: compact 2x2 trust ribbon instead of four stacked rows */
+    .hero-stats-wrapper {
+        margin-top: 36px;
+    }
+
+    .hero-stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 12px;
+        padding: 16px 14px;
+    }
+
+    .stat-card,
+    .stat-card:last-child {
+        padding: 10px 6px;
+        border-bottom: none;
+    }
+
+    .stat-number,
+    .stat-card--lead .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-info p,
+    .stat-card--lead .stat-info p {
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+
+    /* Touch targets: 44px minimum */
+    .lang-toggle-btn,
+    .impact-switch-btn,
+    .filter-tab,
+    .btn-whatsapp-pill {
+        min-height: 44px;
+    }
+
+    .social-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .footer-nav {
+        gap: 0;
+    }
+
+    .footer-nav a {
+        display: inline-block;
+        padding-block: 10px;
+    }
+
+    .footer-bottom-bar a {
+        display: inline-block;
+        padding-block: 10px;
+    }
+
+    .service-action-link {
+        padding-block: 10px;
+    }
+
+    .service-card-footer {
+        padding-top: 8px;
+    }
+
+    .phone-number-link {
+        white-space: nowrap;
+    }
+
+    /* Services page categories: wrap so all seven are visible, no sideways scroll */
+    .svc-nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow-x: visible;
+        -webkit-mask-image: none;
+        mask-image: none;
+        padding: 4px 0 8px;
+    }
+
+    .svc-nav .filter-tab {
+        flex: 0 1 auto;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* Smallest labels stay readable on a phone */
+    .logo-tagline,
+    .service-category-tag,
+    .athar-tag,
+    .work-done-chip,
+    .work-case-label,
+    .country-name,
+    .trail-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-inline: 16px;
+    }
+
+    /* Header: logo, language, theme and menu must fit in one row */
+    .header-container {
+        gap: 10px;
+    }
+
+    .logo {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-title {
+        font-size: 1.12rem;
+        white-space: nowrap;
+    }
+
+    .header-actions {
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .lang-toggle-btn {
+        padding: 0 12px;
+        gap: 6px;
+    }
+
+    /* Short language label on phones; the full name returns on wider screens */
+    .lang-toggle-btn #langText {
+        display: none;
+    }
+
+    .lang-toggle-btn::after {
+        content: "EN";
+        font-size: 0.85rem;
+    }
+
+    body.lang-en .lang-toggle-btn::after {
+        content: "ع";
+        font-size: 1rem;
+    }
+
+    /* Hero: less dead space above the headline, full-width thumb-friendly buttons */
+    .hero-section {
+        min-height: auto;
+        padding: 56px 0 48px;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .hero-cta-group .btn {
+        width: 100%;
+    }
+
+    /* Service cards: outcome first; the full feature lists live on services.html */
+    .service-deluxe-card {
+        padding: 24px 20px;
+    }
+
+    .card-top-bar {
+        margin-bottom: 16px;
+    }
+
+    .service-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+    }
+
+    /* Very narrow phones (360px class): tighten the header one more step */
+    @media (max-width: 400px) {
+        .header-container,
+        .header-actions {
+            gap: 6px;
+        }
+
+        .logo {
+            gap: 6px;
+        }
+
+        .brand-logo {
+            width: 34px;
+            height: 34px;
+        }
+
+        .logo-title {
+            font-size: 0.98rem;
+        }
+
+        .lang-toggle-btn {
+            padding: 0 10px;
+        }
+    }
+
+    /* 320px phones: the logo mark alone carries the brand */
+    @media (max-width: 340px) {
+        .logo-text-group {
+            display: none;
+        }
+    }
+
+    /* Category filters (services, our work, FAQ): an even two-column grid
+       instead of ragged rows */
+    .services-filter-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        gap: 8px;
+        margin-bottom: 32px;
+    }
+
+    .services-filter-tabs .filter-tab {
+        display: flex;
+        border-radius: var(--radius-md);
+        align-items: center;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.35;
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* No hover lift inside the grid: it knocks the rows out of line */
+    .services-filter-tabs .filter-tab:hover,
+    .services-filter-tabs .filter-tab.active {
+        transform: none;
+    }
+
+    .services-filter-tabs .filter-tab:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+
+    /* The intro ends with a colon that leads into the list, so both go together */
+    .service-card-intro,
+    .service-features-list {
         display: none;
     }
 }

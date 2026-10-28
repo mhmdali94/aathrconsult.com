@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
     <!-- Preload the solid icon webfont: used above the fold (header, hero) before Font Awesome's CSS would otherwise discover it -->
-    <link rel="preload" as="font" type="font/woff2" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2" crossorigin>
 
     <!-- Google Fonts: Tajawal & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome 6.4 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -46,14 +46,14 @@
                 </span>
                 <span class="badge-separator">|</span>
                 <span class="badge-item">
-                    <img src="https://flagcdn.com/w20/sa.png" alt="KSA" class="flag-icon-xs">
-                    <span data-lang="ar">المملكة العربية السعودية</span>
-                    <span data-lang="en" style="display: none;">Saudi Arabia</span>
-                </span>
-                <span class="badge-item">
                     <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" class="flag-icon-xs">
                     <span data-lang="ar">جمهورية مصر العربية</span>
                     <span data-lang="en" style="display: none;">Egypt</span>
+                </span>
+                <span class="badge-item">
+                    <img src="https://flagcdn.com/w20/sa.png" alt="KSA" class="flag-icon-xs">
+                    <span data-lang="ar">المملكة العربية السعودية</span>
+                    <span data-lang="en" style="display: none;">Saudi Arabia</span>
                 </span>
             </div>
             <div class="announcement-direct-contact">
@@ -222,8 +222,8 @@
                     </div>
                     <div class="services-filter-tabs faq-tabs">
                     <button type="button" class="filter-tab active" data-faq-filter="all" aria-pressed="true">
-                        <span data-lang="ar">الكل (23)</span>
-                        <span data-lang="en" style="display: none;">All (23)</span>
+                        <span data-lang="ar">الكل (24)</span>
+                        <span data-lang="en" style="display: none;">All (24)</span>
                     </button>
                     <button type="button" class="filter-tab" data-faq-filter="start" aria-pressed="false">
                         <span data-lang="ar">البداية والتعاقد (4)</span>
@@ -242,8 +242,8 @@
                         <span data-lang="en" style="display: none;">ERP & systems (4)</span>
                     </button>
                     <button type="button" class="filter-tab" data-faq-filter="security" aria-pressed="false">
-                        <span data-lang="ar">الأمن والبيانات (3)</span>
-                        <span data-lang="en" style="display: none;">Security & data (3)</span>
+                        <span data-lang="ar">الأمن والبيانات (4)</span>
+                        <span data-lang="en" style="display: none;">Security & data (4)</span>
                     </button>
                     <button type="button" class="filter-tab" data-faq-filter="support" aria-pressed="false">
                         <span data-lang="ar">الدعم بعد التسليم (2)</span>
@@ -490,6 +490,17 @@
                         </div>
                         <div class="faq-card" data-category="security">
                             <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question" data-lang="ar">تصلنا رسائل مزعجة وتصيّد كثيرة، هل يمكنكم إيقافها؟</span>
+                                <span class="faq-question text-ltr" data-lang="en" style="display: none;">We get a lot of spam and phishing. Can you stop it?</span>
+                                <i class="fas fa-chevron-down faq-arrow"></i>
+                            </button>
+                            <div class="faq-answer-panel">
+                                <p data-lang="ar">نعم. نضبط فلترة الرسائل المزعجة والاحتيالية، ونعزل الرسائل المشبوهة، ونفحص الروابط والمرفقات، ونضبط سجلات SPF وDKIM وDMARC حتى لا يرسل أحد باسم شركتك. وإذا وصلت رسالة تصيّد بالفعل، نؤمّن الحسابات المتأثرة ونفعّل التحقق بخطوتين.</p>
+                                <p data-lang="en" style="display: none;" class="text-ltr">Yes. We set up spam and phishing filtering, quarantine suspicious messages, scan links and attachments, and configure SPF, DKIM and DMARC so no one can send email in your company's name. If a phishing email already got through, we secure the affected accounts and turn on two-factor authentication.</p>
+                            </div>
+                        </div>
+                        <div class="faq-card" data-category="security">
+                            <button class="faq-trigger" aria-expanded="false">
                                 <span class="faq-question" data-lang="ar">كيف تحافظون على سرية بياناتنا؟</span>
                                 <span class="faq-question text-ltr" data-lang="en" style="display: none;">How do you protect our confidentiality?</span>
                                 <i class="fas fa-chevron-down faq-arrow"></i>
@@ -710,6 +721,14 @@
     },
     {
       "@type": "Question",
+      "name": "تصلنا رسائل مزعجة وتصيّد كثيرة، هل يمكنكم إيقافها؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم. نضبط فلترة الرسائل المزعجة والاحتيالية، ونعزل الرسائل المشبوهة، ونفحص الروابط والمرفقات، ونضبط سجلات SPF وDKIM وDMARC حتى لا يرسل أحد باسم شركتك. وإذا وصلت رسالة تصيّد بالفعل، نؤمّن الحسابات المتأثرة ونفعّل التحقق بخطوتين."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "كيف تحافظون على سرية بياناتنا؟",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -772,10 +791,10 @@
                 <div class="footer-brand-col">
                     <img src="assets/logo-full.png" alt="Aathr Consulting آثر للاستشارات" class="footer-brand-logo" loading="lazy">
                     <p class="footer-tagline-text" data-lang="ar">
-                        أثرٌ يبقى. أفضل خدمة بأقل تكلفة، على حلول مفتوحة المصدر بلا اشتراكات. شريك تقني واستشاري في السعودية ومصر: ننفذ البنية السحابية والأمن السيبراني وأنظمة ERP والمواقع وحلول الاتصالات، وندعمها بعد التسليم.
+                        أثرٌ يبقى. أفضل خدمة بأقل تكلفة، على حلول مفتوحة المصدر بلا اشتراكات. شريك تقني واستشاري من مصر إلى السعودية: ننفذ البنية السحابية والأمن السيبراني وأنظمة ERP والمواقع وحلول الاتصالات، وندعمها بعد التسليم.
                     </p>
                     <p class="footer-tagline-text text-ltr" data-lang="en" style="display: none;">
-                        Impact that stays. The best service at the lowest cost, on open source with no subscriptions. A technology and consulting partner in Saudi Arabia and Egypt. We implement cloud, cybersecurity, ERP, websites and communications, and support them after go-live.
+                        Impact that stays. The best service at the lowest cost, on open source with no subscriptions. A technology and consulting partner from Egypt to Saudi Arabia. We implement cloud, cybersecurity, ERP, websites and communications, and support them after go-live.
                     </p>
                 </div>
 

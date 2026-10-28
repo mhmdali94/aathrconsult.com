@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T19:30:00Z",
+  "title": "Design System: Aathr Consulting",
+  "extensions": {
+    "colorMeta": {
+      "obsidian-navy": { "role": "primary", "displayName": "Obsidian Navy", "canonical": "#0a2540", "tonalRamp": ["#050d1a", "#061426", "#0a1e38", "#0a2540", "#10375c", "#1b4975", "#2a6496", "#5a8bb8"] },
+      "champagne-gold": { "role": "secondary", "displayName": "Champagne Gold", "canonical": "#d4af37", "tonalRamp": ["#5e4912", "#8c6e1c", "#aa8214", "#b8962e", "#d4af37", "#e9c869", "#fae8a4", "#fdf6dc"] },
+      "gold-antique": { "role": "secondary", "displayName": "Gold Antique", "canonical": "#8c6e1c" },
+      "ink-on-gold": { "role": "neutral", "displayName": "Ink on Gold", "canonical": "#071322" },
+      "whatsapp-green": { "role": "tertiary", "displayName": "WhatsApp Green", "canonical": "#25d366" },
+      "page-mist": { "role": "neutral", "displayName": "Page Mist", "canonical": "#f8fafc", "tonalRamp": ["#0f172a", "#334155", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f1f5f9", "#f8fafc"] },
+      "dark-page": { "role": "neutral", "displayName": "Dark Page", "canonical": "#060f1c", "tonalRamp": ["#060f1c", "#081424", "#0a192f", "#0d1e36", "#0e223f", "#182c48", "#223c62", "#2e4c78"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only, white on navy." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "CTA band and service block titles." },
+      "lead": { "displayName": "Lead", "purpose": "Hero subtext and section subtitles." },
+      "body": { "displayName": "Body (Arabic)", "purpose": "Running text in Tajawal, RTL." },
+      "body-en": { "displayName": "Body (English)", "purpose": "Running text in Plus Jakarta Sans, LTR." },
+      "label": { "displayName": "Label", "purpose": "Section badges and form labels." }
+    },
+    "shadows": [
+      { "name": "rest", "value": "0 2px 8px rgba(10, 37, 64, 0.04)", "purpose": "Faintest lift for cards at rest; often unnecessary." },
+      { "name": "hover", "value": "0 6px 20px rgba(10, 37, 64, 0.07)", "purpose": "Cards and links responding to pointer." },
+      { "name": "raised", "value": "0 14px 36px rgba(10, 37, 64, 0.1)", "purpose": "Open menus, sticky header after scroll." },
+      { "name": "gold-glow", "value": "0 4px 15px rgba(212, 175, 55, 0.25)", "purpose": "Primary button only." }
+    ],
+    "motion": [
+      { "name": "ease-expo-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "All transitions." },
+      { "name": "fast", "value": "0.2s", "purpose": "State changes: hover, focus, color." },
+      { "name": "base", "value": "0.35s", "purpose": "Card and theme transitions." },
+      { "name": "slow", "value": "0.6s", "purpose": "Scroll reveals." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "576px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "992px" },
+      { "name": "xl", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The consultation call to action; gold gradient, ink text.",
+      "html": "<button class=\"ds-btn-primary\">احجز استشارتك المجانية</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 13px 28px; font-family: Tajawal, sans-serif; font-size: 0.98rem; font-weight: 700; color: #071322; background: linear-gradient(135deg, #fce588 0%, #d4af37 50%, #aa8214 100%); border: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25); cursor: pointer; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4); } .ds-btn-primary:focus-visible { outline: 2px solid #0a2540; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Dark Button",
+      "kind": "button",
+      "refersTo": "button-outline-dark",
+      "description": "Secondary action on light surfaces.",
+      "html": "<button class=\"ds-btn-outline\">تعرف على خدماتنا</button>",
+      "css": ".ds-btn-outline { padding: 13px 28px; font-family: Tajawal, sans-serif; font-size: 0.98rem; font-weight: 700; color: #0a2540; background: transparent; border: 1px solid #0a2540; border-radius: 8px; cursor: pointer; transition: background 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-outline:hover { background: #0a2540; color: #f8fafc; } .ds-btn-outline:focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }"
+    },
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "WhatsApp contact only.",
+      "html": "<button class=\"ds-btn-wa\">واتساب</button>",
+      "css": ".ds-btn-wa { padding: 13px 28px; font-family: Tajawal, sans-serif; font-weight: 700; color: #f8fafc; background: #25d366; border: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); cursor: pointer; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s; } .ds-btn-wa:hover { background: #20ba5a; transform: translateY(-2px); } .ds-btn-wa:focus-visible { outline: 2px solid #0a2540; outline-offset: 3px; }"
+    },
+    {
+      "name": "Section Badge",
+      "kind": "chip",
+      "refersTo": "section-badge",
+      "description": "Gold pill above section headlines.",
+      "html": "<span class=\"ds-badge\">خدماتنا</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 9999px; background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.4); color: #8c6e1c; font-family: Tajawal, sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Contact form field with gold focus halo.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">الاسم</span><input class=\"ds-input\" placeholder=\"اسمك الكامل\" dir=\"rtl\"></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; font-family: Tajawal, sans-serif; } .ds-label { font-size: 0.88rem; font-weight: 700; color: #334155; } .ds-input { padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 8px; background: #f8fafc; color: #0f172a; font-family: inherit; font-size: 0.95rem; transition: border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-input:focus { outline: none; border-color: #8c6e1c; box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.08); }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header link with gold underline growing from the reading-start edge.",
+      "html": "<nav class=\"ds-nav\" dir=\"rtl\"><a class=\"ds-nav-link ds-active\" href=\"#\">الرئيسية</a><a class=\"ds-nav-link\" href=\"#\">خدماتنا</a><a class=\"ds-nav-link\" href=\"#\">من نحن</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 28px; font-family: Tajawal, sans-serif; } .ds-nav-link { position: relative; padding: 8px 0; font-size: 0.98rem; font-weight: 600; color: #334155; text-decoration: none; transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-link::after { content: ''; position: absolute; bottom: 0; right: 0; height: 2px; width: 0; background: #d4af37; border-radius: 2px; transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-link:hover, .ds-active { color: #8c6e1c; } .ds-nav-link:hover::after, .ds-active::after { width: 100%; } .ds-nav-link:focus-visible { outline: 2px solid #d4af37; outline-offset: 4px; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Flat at rest; gold top rule and hover shadow on pointer.",
+      "html": "<article class=\"ds-card\" dir=\"rtl\"><span class=\"ds-card-num\">01</span><h3 class=\"ds-card-title\">السحابة والخوادم</h3><p class=\"ds-card-text\">خوادم على بنيتك أو بنيتنا، بلا اشتراكات.</p></article>",
+      "css": ".ds-card { position: relative; overflow: hidden; padding: 34px 28px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px; font-family: Tajawal, sans-serif; transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s; } .ds-card::before { content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 4px; background: linear-gradient(135deg, #fce588 0%, #d4af37 50%, #aa8214 100%); opacity: 0; transition: opacity 0.2s; } .ds-card:hover { box-shadow: 0 6px 20px rgba(10, 37, 64, 0.07); border-color: rgba(212, 175, 55, 0.4); } .ds-card:hover::before { opacity: 1; } .ds-card-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; font-weight: 900; color: #94a3b8; } .ds-card-title { margin: 12px 0 8px; font-size: 1.3rem; font-weight: 800; color: #0f172a; } .ds-card-text { margin: 0; color: #64748b; line-height: 1.7; }"
+    },
+    {
+      "name": "CTA Band",
+      "kind": "custom",
+      "refersTo": "cta-band",
+      "description": "Closing navy panel on every page pointing to the free consultation.",
+      "html": "<section class=\"ds-cta\" dir=\"rtl\"><div><h2 class=\"ds-cta-title\">جاهز ترى أثرنا في مشروعك؟</h2><p class=\"ds-cta-text\">استشارة مجانية بلا التزام.</p></div><button class=\"ds-cta-btn\">احجز استشارتك</button></section>",
+      "css": ".ds-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 40px; padding: 48px 52px; border-radius: 20px; background: #0a2540; font-family: Tajawal, sans-serif; } .ds-cta-title { margin: 0 0 8px; font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 800; color: #f8fafc; } .ds-cta-text { margin: 0; color: #b6c2d3; max-width: 56ch; } .ds-cta-btn { padding: 16px 36px; font-family: inherit; font-size: 1.05rem; font-weight: 700; color: #071322; background: linear-gradient(135deg, #fce588 0%, #d4af37 50%, #aa8214 100%); border: none; border-radius: 14px; cursor: pointer; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-cta-btn:hover { transform: translateY(-2px); } .ds-cta-btn:focus-visible { outline: 2px solid #fae8a4; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lasting Mark",
+    "overview": "The site is built around the tagline أثرٌ يبقى, Impact that stays. Every surface should feel like work that will still be standing in five years: deep obsidian navy as the ground, champagne gold as the mark left on it, and generous quiet space between them. Nothing is decorative for its own sake; the gold appears where something has been achieved or where the visitor should act.\n\nThe system is Arabic-first. Tajawal carries the voice in right-to-left layout, Plus Jakarta Sans takes over in English, and both directions are designed, not mirrored. Density is calm: sections breathe at 100px vertical padding, content sits inside a 1320px container with 24px gutters, and headers stop at 780px wide so headlines read as statements, not banners. A light and a dark theme both exist and both must hold.\n\nThis system rejects the old-school IT company look named in PRODUCT.md: clip-art servers and network cables, cluttered pages, stacked banners, dated corporate stock photos, walls of service bullet points. It also refuses to let cost-effectiveness read as \"cheap vendor\"; restraint and precision are how a fair price looks expensive.",
+    "keyCharacteristics": [
+      "Obsidian navy ground, champagne gold mark, slate-cool neutrals.",
+      "Arabic-first RTL with first-class English LTR.",
+      "Mostly flat surfaces; depth appears in response to the visitor.",
+      "Heavy headline weights (800 to 900) against relaxed 1.7 body leading.",
+      "One clear action per view: book the free consultation."
+    ],
+    "rules": [
+      { "name": "The Locked Palette Rule", "body": "The navy and gold values in the frontmatter are final. Never introduce a new hue, never shift these hexes, never \"refresh\" the palette.", "section": "colors" },
+      { "name": "The Gold Is Earned Rule", "body": "Gold marks action or achievement: the primary CTA, the active state, the badge above a heading. If gold appears on something the visitor cannot act on and that does not signal accomplishment, remove it.", "section": "colors" },
+      { "name": "The Readable Gold Rule", "body": "On light backgrounds, gold text uses Gold Antique; on navy or dark surfaces, Gold Light or Champagne Gold. Never set Champagne Gold text on white.", "section": "colors" },
+      { "name": "The One Family Per Language Rule", "body": "Arabic is set in Tajawal, English in Plus Jakarta Sans. Never mix them inside one sentence-level element; Latin product names inside Arabic text inherit Tajawal.", "section": "typography" },
+      { "name": "The Weight Carries Hierarchy Rule", "body": "Headings are 800 to 900, body is 400. Nothing in between competes for attention; 600 is reserved for nav links.", "section": "typography" },
+      { "name": "The Flat At Rest Rule", "body": "Nothing floats until the visitor touches it. If a resting card has a visible shadow at arm's length, the shadow is too strong.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every color exactly as defined in the frontmatter; change usage, never values.",
+      "Do design Arabic RTL first, then verify English LTR, including the direction of underlines, icons, and input padding.",
+      "Do reserve gold for actions, active states, and earned marks.",
+      "Do use Gold Antique (#8c6e1c) for gold text on light backgrounds so it passes WCAG 2.1 AA.",
+      "Do keep surfaces flat at rest and let shadows answer hover and focus.",
+      "Do end every page with the navy CTA band pointing to the free consultation.",
+      "Do honor prefers-reduced-motion for every reveal and hover lift."
+    ],
+    "donts": [
+      "Don't look like an old-school IT company: no clip-art servers and network cables, no cluttered pages, no stacked banners, no dated corporate stock photos, no walls of service bullet points.",
+      "Don't let low cost read as \"cheap vendor\": no discount badges, starbursts, or price shouting.",
+      "Don't use gradient text. The gold gradient lives on primary buttons only; headings and emphasis use solid gold.",
+      "Don't use border-left or border-right wider than 1px as a colored accent stripe on cards, callouts, or list items.",
+      "Don't use glassmorphism beyond the single translucent outline button on the navy hero.",
+      "Don't build rows of identical icon-plus-heading cards; vary the structure or use the service-block layout.",
+      "Don't put Champagne Gold text on white, or any text other than Ink on Gold on a gold fill.",
+      "Don't use WhatsApp Green for anything but the WhatsApp action."
+    ]
+  }
+}

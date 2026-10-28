@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
     <!-- Preload the solid icon webfont: used above the fold (header, hero) before Font Awesome's CSS would otherwise discover it -->
-    <link rel="preload" as="font" type="font/woff2" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2" crossorigin>
 
     <!-- Google Fonts: Tajawal & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome 6.4 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -46,14 +46,14 @@
                 </span>
                 <span class="badge-separator">|</span>
                 <span class="badge-item">
-                    <img src="https://flagcdn.com/w20/sa.png" alt="KSA" class="flag-icon-xs">
-                    <span data-lang="ar">المملكة العربية السعودية</span>
-                    <span data-lang="en" style="display: none;">Saudi Arabia</span>
-                </span>
-                <span class="badge-item">
                     <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" class="flag-icon-xs">
                     <span data-lang="ar">جمهورية مصر العربية</span>
                     <span data-lang="en" style="display: none;">Egypt</span>
+                </span>
+                <span class="badge-item">
+                    <img src="https://flagcdn.com/w20/sa.png" alt="KSA" class="flag-icon-xs">
+                    <span data-lang="ar">المملكة العربية السعودية</span>
+                    <span data-lang="en" style="display: none;">Saudi Arabia</span>
                 </span>
             </div>
             <div class="announcement-direct-contact">
@@ -275,12 +275,23 @@
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">تقوية الخوادم والشبكات وضبط جدران الحماية</span><span data-lang="en" style="display: none;">Server and network hardening and firewall configuration</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">مراقبة أمنية وتنبيه فوري عند أي محاولة اختراق</span><span data-lang="en" style="display: none;">Security monitoring with instant alerts on any intrusion attempt</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">التحقق بخطوتين والحماية من رسائل التصيّد</span><span data-lang="en" style="display: none;">Two-factor authentication and phishing protection</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span data-lang="ar">فلترة الرسائل المزعجة والاحتيالية</span><span data-lang="en" style="display: none;">Spam and phishing filtering</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">إدارة صلاحيات الموظفين وكلمات المرور</span><span data-lang="en" style="display: none;">Staff access and password management</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">تنظيف المواقع المخترقة وتأمينها</span><span data-lang="en" style="display: none;">Cleaning up and securing hacked websites</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">التوافق مع ضوابط NCA ومعيار ISO 27001</span><span data-lang="en" style="display: none;">NCA controls and ISO 27001 alignment</span></li>
                         </ul>
                         <h3 class="svc-label" data-lang="ar">من أعمالنا</h3><h3 class="svc-label" data-lang="en" style="display: none;">From our work</h3>
                         <ul class="svc-work">
+                            <li><a href="ourwork.html#project-34">
+                                <span class="svc-work-num">34</span>
+                                <span class="svc-work-title" data-lang="ar">صندوق البريد يغرق بالرسائل المزعجة والاحتيالية</span><span class="svc-work-title" data-lang="en" style="display: none;">An inbox flooded with spam and phishing</span>
+                                <i class="fas fa-arrow-left ar-icon"></i><i class="fas fa-arrow-right en-icon" style="display: none;"></i>
+                            </a></li>
+                            <li><a href="ourwork.html#project-28">
+                                <span class="svc-work-num">28</span>
+                                <span class="svc-work-title" data-lang="ar">رسالة تصيّد كادت تسرق حسابات الموظفين</span><span class="svc-work-title" data-lang="en" style="display: none;">A phishing email nearly took over staff accounts</span>
+                                <i class="fas fa-arrow-left ar-icon"></i><i class="fas fa-arrow-right en-icon" style="display: none;"></i>
+                            </a></li>
                             <li><a href="ourwork.html#project-11">
                                 <span class="svc-work-num">11</span>
                                 <span class="svc-work-title" data-lang="ar">تقوية الخوادم ومراقبة الأمان باستمرار</span><span class="svc-work-title" data-lang="en" style="display: none;">Server hardening and continuous security monitoring</span>
@@ -294,11 +305,6 @@
                             <li><a href="ourwork.html#project-27">
                                 <span class="svc-work-num">27</span>
                                 <span class="svc-work-title" data-lang="ar">موظف غادر ومعه كل كلمات المرور</span><span class="svc-work-title" data-lang="en" style="display: none;">An employee left with all the passwords</span>
-                                <i class="fas fa-arrow-left ar-icon"></i><i class="fas fa-arrow-right en-icon" style="display: none;"></i>
-                            </a></li>
-                            <li><a href="ourwork.html#project-28">
-                                <span class="svc-work-num">28</span>
-                                <span class="svc-work-title" data-lang="ar">رسالة تصيّد كادت تسرق حسابات الموظفين</span><span class="svc-work-title" data-lang="en" style="display: none;">A phishing email nearly took over staff accounts</span>
                                 <i class="fas fa-arrow-left ar-icon"></i><i class="fas fa-arrow-right en-icon" style="display: none;"></i>
                             </a></li>
                         </ul>
@@ -325,6 +331,7 @@
                         <ul class="svc-list">
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">ترحيل البريد إلى منصات آمنة مثل Microsoft 365</span><span data-lang="en" style="display: none;">Moving email to secure platforms such as Microsoft 365</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">إصلاح مشاكل الإرسال والاستقبال والحظر وسجلات DNS</span><span data-lang="en" style="display: none;">Fixing sending, receiving, blocking and DNS problems</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span data-lang="ar">فلترة الرسائل المزعجة وحماية الدومين من الانتحال (SPF وDKIM وDMARC)</span><span data-lang="en" style="display: none;">Spam filtering and domain spoofing protection (SPF, DKIM, DMARC)</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">مجلدات مشتركة بصلاحيات واضحة لكل قسم</span><span data-lang="en" style="display: none;">Shared folders with clear permissions for each department</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">مشاركة آمنة للملفات مع العملاء بروابط محمية</span><span data-lang="en" style="display: none;">Secure file sharing with clients through protected links</span></li>
                             <li><i class="fas fa-circle-check"></i> <span data-lang="ar">حماية الملفات من فيروسات الفدية واستعادتها</span><span data-lang="en" style="display: none;">Protecting files from ransomware, and restoring them</span></li>
@@ -335,6 +342,11 @@
                             <li><a href="ourwork.html#project-03">
                                 <span class="svc-work-num">03</span>
                                 <span class="svc-work-title" data-lang="ar">تأمين البريد الإلكتروني ونقله إلى Microsoft 365</span><span class="svc-work-title" data-lang="en" style="display: none;">Securing email and moving it to Microsoft 365</span>
+                                <i class="fas fa-arrow-left ar-icon"></i><i class="fas fa-arrow-right en-icon" style="display: none;"></i>
+                            </a></li>
+                            <li><a href="ourwork.html#project-34">
+                                <span class="svc-work-num">34</span>
+                                <span class="svc-work-title" data-lang="ar">صندوق البريد يغرق بالرسائل المزعجة والاحتيالية</span><span class="svc-work-title" data-lang="en" style="display: none;">An inbox flooded with spam and phishing</span>
                                 <i class="fas fa-arrow-left ar-icon"></i><i class="fas fa-arrow-right en-icon" style="display: none;"></i>
                             </a></li>
                             <li><a href="ourwork.html#project-24">
@@ -600,10 +612,10 @@
                 <div class="footer-brand-col">
                     <img src="assets/logo-full.png" alt="Aathr Consulting آثر للاستشارات" class="footer-brand-logo" loading="lazy">
                     <p class="footer-tagline-text" data-lang="ar">
-                        أثرٌ يبقى. أفضل خدمة بأقل تكلفة، على حلول مفتوحة المصدر بلا اشتراكات. شريك تقني واستشاري في السعودية ومصر: ننفذ البنية السحابية والأمن السيبراني وأنظمة ERP والمواقع وحلول الاتصالات، وندعمها بعد التسليم.
+                        أثرٌ يبقى. أفضل خدمة بأقل تكلفة، على حلول مفتوحة المصدر بلا اشتراكات. شريك تقني واستشاري من مصر إلى السعودية: ننفذ البنية السحابية والأمن السيبراني وأنظمة ERP والمواقع وحلول الاتصالات، وندعمها بعد التسليم.
                     </p>
                     <p class="footer-tagline-text text-ltr" data-lang="en" style="display: none;">
-                        Impact that stays. The best service at the lowest cost, on open source with no subscriptions. A technology and consulting partner in Saudi Arabia and Egypt. We implement cloud, cybersecurity, ERP, websites and communications, and support them after go-live.
+                        Impact that stays. The best service at the lowest cost, on open source with no subscriptions. A technology and consulting partner from Egypt to Saudi Arabia. We implement cloud, cybersecurity, ERP, websites and communications, and support them after go-live.
                     </p>
                 </div>
 
