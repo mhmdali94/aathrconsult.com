@@ -1,0 +1,6 @@
+# SMTP credentials: keep server-side only, never commit
+mail-config.php
+
+# macOS / editor
+.DS_Store
+.vscode/

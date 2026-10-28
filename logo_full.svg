@@ -1,0 +1,14 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon Section -->
+  <g transform="translate(0, 0)">
+    <circle cx="50" cy="50" r="45" fill="#0A2540" />
+    <path d="M50 25L30 70H38L50 45L62 70H70L50 25Z" fill="white" />
+    <rect x="42" y="55" width="16" height="3" rx="1.5" fill="#D4AF37" />
+  </g>
+  
+  <!-- Arabic Text -->
+  <text x="110" y="45" fill="#0A2540" font-family="'Tajawal', sans-serif" font-size="28" font-weight="bold">آثر للاستشارات</text>
+  
+  <!-- English Text -->
+  <text x="110" y="75" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="20" font-weight="600">Aathr Consulting</text>
+</svg>
