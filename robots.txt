@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /send-email.php
+Disallow: /vendor/
+
+Sitemap: https://aathrconsult.com/sitemap.xml
